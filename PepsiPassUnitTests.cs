@@ -23,18 +23,20 @@ namespace myFirstTest
 		public void tearDown()
 		{
 			app.Invoke ("Finish");	
+			
 		}
-	
 		[Test]
-		public void more_music_textview_is_present() {
+		public void more_music_more_sports_text_is_present() {
+			app.WaitForElement (e => e.Id ("more_music_textview"), timeout:	time_out);	
 			var more_music_textview = app.Query(e =>e.Id("more_music_textview"));
-			Assert.IsNotNull (more_music_textview);
+			Assert.AreEqual (more_music_textview.Length, 1);
 		}
 
 		//[Test]
 		public void sign_in_with_facebook_button_is_present() {
+			app.WaitForElement (e => e.Id ("authButton"), timeout: time_out);
 			var authButton = app.Query (e => e.Id ("authButton"));
-			Assert.IsNotNull (authButton);
+			Assert.AreEqual	(authButton.Length, 1);
 		}
 		 
 		//[Test]
