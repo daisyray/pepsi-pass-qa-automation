@@ -4,7 +4,7 @@ using Xamarin.UITest;
 using Xamarin.UITest.Android;
 using Xamarin.UITest.Queries;
 
-namespace myFirstTest
+namespace pepsipassqa
 {
 	[TestFixture]
 	public class Test
